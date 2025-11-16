@@ -1,0 +1,23 @@
+:root{
+  --bg: #f7f7f8;
+  --card: #fff;
+  --text: #111;
+  --warning: #f9e79f;
+  --critical: #f5b7b1;
+}
+body{font-family: Inter, system-ui, Arial; margin:0; padding:1rem; background:var(--bg); color:var(--text)}
+.app header{margin-bottom:1rem}
+.grid{display:flex; gap:1rem; flex-wrap:wrap}
+.timer, .violations, .summary{background:var(--card); padding:1rem; border-radius:8px; box-shadow:0 1px 4px rgba(0,0,0,0.06); flex:1 1 320px}
+.time{font-size:3rem; font-weight:600}
+.controls button{margin-right:.5rem}
+.extras{margin-top:.5rem}
+.violations .buttons button{display:block; margin:0.25rem 0; width:100%}
+.badge{background:#d1d8e0;color:#111;padding:2px 8px;border-radius:999px;margin-left:8px}
+.timer.warning{border-left:6px solid #f1c40f}
+.timer.critical{border-left:6px solid #e74c3c}
+.summary h2{margin-top:0}
+
+@media (max-width:700px){
+  .grid{flex-direction:column}
+}
